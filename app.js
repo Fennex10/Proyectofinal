@@ -1,12 +1,10 @@
 const http = require("http");
 
-const PORT = process.env.PORT || 3000;
-
-const server = http.createServer((req, res) => {
+const requestHandler = (req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hola Mundo sin Express! 🚀");
-});
+  res.end("Hola Mundo desde DevOps CI/CD!");
+};
 
-server.listen(PORT, () => {
-  console.log("Servidor corriendo en el puerto " + PORT);
-});
+const server = http.createServer(requestHandler);
+
+module.exports = server;
