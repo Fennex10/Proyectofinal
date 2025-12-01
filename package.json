@@ -6,7 +6,9 @@
     "start": "node app.js",
     "test": "jest --runInBand"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.19.2"
+  },
   "devDependencies": {
     "jest": "^29.0.0"
   }
